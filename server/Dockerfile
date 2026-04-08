@@ -1,4 +1,4 @@
-# server/Dockerfile — Cloud SRE Sandbox container image
+ # server/Dockerfile — Cloud SRE Sandbox container image
 # Mirrors echo_env/server/Dockerfile using openenv-base multi-stage build
 
 ARG BASE_IMAGE=ghcr.io/meta-pytorch/openenv-base:latest
