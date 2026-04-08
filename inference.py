@@ -175,7 +175,7 @@ def run_episode(task_name: str, task_prompt: str, base_url: str,
             err_str = "null" if not step_error else step_error
 
             print(
-                f"[STEP] step={step_n} action={action_str!r} "
+                f"[STEP] step={step_n} action={action_str} "
                 f"reward={reward_val:.2f} done={done_str} error={err_str}",
                 flush=True,
             )
