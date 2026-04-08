@@ -1,0 +1,22 @@
+# .gitignore — Cloud SRE Sandbox
+__pycache__/
+*.py[cod]
+*.pyc
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.coverage
+htmlcov/
+outputs/logs/*
+outputs/evals/*
+!outputs/logs/.gitkeep
+!outputs/evals/.gitkeep
+.env
+*.env.local
+.DS_Store
+Thumbs.db
+uv.lock

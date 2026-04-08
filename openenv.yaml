@@ -1,0 +1,9 @@
+# openenv.yaml — Cloud SRE Sandbox
+# Mirrors echo_env/openenv.yaml exactly
+
+spec_version: 1
+name: cloud-sre-env
+type: space
+runtime: fastapi
+app: server.app:app
+port: 7860

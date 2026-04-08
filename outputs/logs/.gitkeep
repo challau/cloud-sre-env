@@ -1,0 +1,2 @@
+# outputs/logs/.gitkeep
+# This directory stores runtime logs — excluded from Docker via .dockerignore

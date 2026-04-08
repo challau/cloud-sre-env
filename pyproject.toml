@@ -1,0 +1,42 @@
+# pyproject.toml — Cloud SRE Sandbox
+# Mirrors echo_env/pyproject.toml exactly
+
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openenv-cloud-sre-env"
+version = "0.1.0"
+description = "Cloud SRE Sandbox — OpenEnv MCP environment for AI agent benchmarking"
+requires-python = ">=3.10"
+dependencies = [
+    # Core OpenEnv (matches echo_env exactly)
+    "openenv-core[core]>=0.2.2",
+    "fastapi>=0.115.0",
+    "pydantic>=2.0.0",
+    "uvicorn>=0.24.0",
+    "requests>=2.31.0",
+    # MCP support (required for MCPEnvironment + FastMCP tools)
+    "fastmcp>=2.0.0",
+    # AI agent loop
+    "openai>=1.12.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+# ── Console script entry point (mirrors echo_env exactly) ────────────────────
+# Enables: uv run --project . server
+[project.scripts]
+server = "sre_env.server.app:main"
+
+# ── Package discovery (mirrors echo_env: maps package name → directory) ──────
+[tool.setuptools]
+include-package-data = true
+packages = ["sre_env", "sre_env.server"]
+package-dir = { "sre_env" = ".", "sre_env.server" = "server" }

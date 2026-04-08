@@ -1,0 +1,40 @@
+# .dockerignore — Docker build exclusions for Cloud SRE Sandbox
+# Mirrors the OpenEnv template spec
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Runtime outputs (logs, evals) — gitignored and not needed in image
+outputs/
+
+# Tests
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Development tools
+.git/
+.gitignore
+.idea/
+.vscode/
+*.egg-info/
+
+# Environment files with secrets
+.env
+*.env.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Notebooks (not needed in container)
+*.ipynb

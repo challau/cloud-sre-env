@@ -1,0 +1,2 @@
+# outputs/evals/.gitkeep
+# This directory stores evaluation results — excluded from Docker via .dockerignore
