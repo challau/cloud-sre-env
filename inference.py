@@ -199,7 +199,7 @@ def run_episode(task_name: str, task_prompt: str, base_url: str,
 
 
 def main() -> None:
-    base_url = os.getenv("SRE_SERVER_URL", "http://localhost:7860")
+    base_url = os.getenv("SRE_SERVER_URL", "http://localhost:8000")
 
     for task_cfg in TASK_CONFIGS:
         run_episode(task_cfg["name"], task_cfg["prompt"], base_url)
